@@ -15,13 +15,13 @@ public interface CalculationRepository extends JpaRepository<SampleModel, Long> 
     /**
      * Вызов запроса с использованием функции f_calc.
      *
-     * @param first  первый аргумент расчета
-     * @param second второй аргумент расчета
-     * @param oper   операция (+,-,*,/)
+     * @param first     первый аргумент расчета
+     * @param second    второй аргумент расчета
+     * @param operation операция (+,-,*,/)
      * @return результат выполнения операции
      */
     @Query(nativeQuery = true, value = "select f_calc(:first, :second, :oper)")
     double getCalculationResult(@Param("first") double first,
                                 @Param("second") double second,
-                                @Param("oper") String oper);
+                                @Param("oper") String operation);
 }

@@ -5,6 +5,11 @@ import ru.ibs.education.model.CalculationRequest;
 import ru.ibs.education.model.CalculationResponse;
 import ru.ibs.education.persistence.repositories.CalculationRepository;
 
+/**
+ * Реализация {@link CalculationService} с помощью PostgreSQL функции.
+ *
+ * @author vbotalov
+ */
 public class DBCalculationService implements CalculationService {
 
     private static final String EXECUTOR = "POSTGRES";
