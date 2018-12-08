@@ -1,0 +1,104 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-12-08T15:23:37.274Z",
+	"__export_source": "insomnia.desktop.app:v6.2.3",
+	"resources": [
+		{
+			"_id": "wrk_1fdb4fb1dd7a4a5bbab2c1975889a22f",
+			"created": 1544273455721,
+			"description": "",
+			"modified": 1544273455721,
+			"name": "Education",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_ec6e1e0492834f00b2842530494bdb0c",
+			"color": null,
+			"created": 1544273455749,
+			"data": {
+				"base_url": "http://localhost:8080"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1544273455749,
+			"modified": 1544273598470,
+			"name": "New Environment",
+			"parentId": "wrk_1fdb4fb1dd7a4a5bbab2c1975889a22f",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_27d8be66a7924b25a62dda1fd7fe66d5",
+			"cookies": [],
+			"created": 1544273455744,
+			"modified": 1544273455744,
+			"name": "Default Jar",
+			"parentId": "wrk_1fdb4fb1dd7a4a5bbab2c1975889a22f",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_447f412ce89a4bc68a66130e4a6ca02a",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"first\": 10,\n\t\"second\": 12.5,\n\t\"operation\": \"+\"\n}"
+			},
+			"created": 1544273523188,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_78224539301441d8853fdbd12f485d86",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544273523188,
+			"method": "POST",
+			"modified": 1544282558463,
+			"name": "Расчет суммы",
+			"parameters": [],
+			"parentId": "wrk_1fdb4fb1dd7a4a5bbab2c1975889a22f",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/calculator/calc",
+			"_type": "request"
+		},
+		{
+			"_id": "req_37686a391586492ca1d6c27524465dac",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"first\": 10,\n\t\"second\": 0,\n\t\"operation\": \"/\"\n}"
+			},
+			"created": 1544281225388,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_78224539301441d8853fdbd12f485d86",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1543286839405,
+			"method": "POST",
+			"modified": 1544282074588,
+			"name": "Ошибка расчета",
+			"parameters": [],
+			"parentId": "wrk_1fdb4fb1dd7a4a5bbab2c1975889a22f",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/calculator/calc",
+			"_type": "request"
+		}
+	]
+}
