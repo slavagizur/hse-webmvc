@@ -39,4 +39,9 @@ public class CalculationRequest {
     public void setOperation(String operation) {
         this.operation = operation;
     }
+
+    @Override
+    public String toString() {
+        return first + operation + second;
+    }
 }

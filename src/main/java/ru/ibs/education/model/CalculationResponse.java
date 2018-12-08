@@ -19,6 +19,9 @@ public class CalculationResponse {
     /** Кем был выполнен расчет. */
     private String executor;
 
+    /** Исходный запрос. */
+    private String sourceRequest;
+
     public CalculationResponse(String executor) {
         this.executor = executor;
     }
@@ -56,5 +59,13 @@ public class CalculationResponse {
 
     public void setExecutor(String executor) {
         this.executor = executor;
+    }
+
+    public String getSourceRequest() {
+        return sourceRequest;
+    }
+
+    public void setSourceRequest(String sourceRequest) {
+        this.sourceRequest = sourceRequest;
     }
 }

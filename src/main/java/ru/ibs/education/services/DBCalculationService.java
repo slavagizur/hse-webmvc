@@ -15,6 +15,7 @@ public class DBCalculationService implements CalculationService {
     @Override
     public CalculationResponse calc(CalculationRequest request) {
         CalculationResponse response = new CalculationResponse(EXECUTOR);
+        response.setSourceRequest(request.toString());
         try {
             double result = repository.getCalculationResult(request.getFirst(), request.getSecond(), request.getOperation());
             response.setResult(result);
